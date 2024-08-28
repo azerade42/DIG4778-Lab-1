@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class ChessPiece : MonoBehaviour
 {
-
     [SerializeField] private Vector3 startPosition;
     [SerializeField] private List<Vector3> validMoves;
-    [SerializeField] private Sprite Icon;
+    [SerializeField] private Sprite icon;
+
+    public enum PieceColor
+    {
+        White,
+        Black
+    }
 
     private void Start()
     {
-        this.GetComponent<SpriteRenderer>().sprite = Icon;
+        this.GetComponent<SpriteRenderer>().sprite = icon;
     }
-    public enum MyEnum
-    {
-        white,
-        black
-    }
-
 }
