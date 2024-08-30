@@ -97,9 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0db9818c0cefca49a04551be50be0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {x: 0, y: 0, z: 0}
-  validMoves: []
+  <startPositions>k__BackingField:
+  - {x: 2, y: 0}
+  - {x: 5, y: 0}
+  validMoves:
+  - {x: 7, y: 7}
+  - {x: 7, y: -7}
+  - {x: -7, y: 7}
+  - {x: -7, y: -7}
   icon: {fileID: -526671067, guid: bb3a7d638ccb89641bc697221b762f07, type: 3}
-  altIcon: {fileID: -875804234, guid: bb3a7d638ccb89641bc697221b762f07, type: 3}
   color: 0
-  type: 2
+  <type>k__BackingField: 2
