@@ -49,15 +49,22 @@ public class ChessBoard : MonoBehaviour
 
     private void ResetPieces()
     {
-        foreach (ChessPiece piece in currentPieces)
-            DestroyImmediate(piece.gameObject);
+        if (currentPieces == null)
+            return;
 
+        foreach (ChessPiece piece in currentPieces)
+        {
+            if (piece.gameObject)
+                DestroyImmediate(piece.gameObject);
+        }
+        
         currentPieces.Clear();
-        Gizmos.color = Color.black;
     }
 
     private void GeneratePieces()
     {
+        Gizmos.color = Color.black;
+
         foreach (ChessPiece piece in chessPieces)
         {
             if (piece == null) continue;
